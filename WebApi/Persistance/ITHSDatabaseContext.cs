@@ -7,6 +7,10 @@ namespace ITHS.Webapi.Persistance
     {
         public DbSet<Person> Persons { get; set; }
         public DbSet<Role> Roles { get; set; }
+
+        public ITHSDatabaseContext() : base()
+        {
+        }
         
         public ITHSDatabaseContext(DbContextOptions<ITHSDatabaseContext> options) : base(options)
         {
@@ -15,7 +19,7 @@ namespace ITHS.Webapi.Persistance
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer();
+                optionsBuilder.UseSqlite("Data Source=SqlLight.db");
 
             base.OnConfiguring(optionsBuilder);
         }

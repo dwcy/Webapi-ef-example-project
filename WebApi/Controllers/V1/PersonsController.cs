@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ITHS.Webapi.Contexts;
+using ITHS.Webapi.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ITHS.Webapi.Controllers.V1
@@ -7,10 +9,25 @@ namespace ITHS.Webapi.Controllers.V1
     [ApiController]
     public class PersonsController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Get()
+        PersonService _personService;
+        
+        public PersonsController()
         {
-            return Ok("Hello from PersonsController");
+            _personService = new PersonService();
+        }
+
+        [HttpGet]
+        public IActionResult Get(string firstName)
+        {
+            var person = _personService.FindPersonsByFirstName(firstName);
+            return Ok(person);
+        }
+
+        [HttpPost]
+        public IActionResult AddPerson(Person person)
+        {
+            _personService.AddPerson(person);
+            return Ok();
         }
     }
 }

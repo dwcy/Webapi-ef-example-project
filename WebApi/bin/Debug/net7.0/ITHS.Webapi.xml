@@ -30,28 +30,16 @@
             Deletes a specific item from list
             </summary>
         </member>
-        <member name="T:ITHS.Webapi.Migrations.initdatabase">
+        <member name="T:ITHS.Webapi.Migrations.init">
             <inheritdoc />
         </member>
-        <member name="M:ITHS.Webapi.Migrations.initdatabase.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:ITHS.Webapi.Migrations.init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:ITHS.Webapi.Migrations.initdatabase.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:ITHS.Webapi.Migrations.init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:ITHS.Webapi.Migrations.initdatabase.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:ITHS.Webapi.Migrations.addroletoperson">
-            <inheritdoc />
-        </member>
-        <member name="M:ITHS.Webapi.Migrations.addroletoperson.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ITHS.Webapi.Migrations.addroletoperson.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ITHS.Webapi.Migrations.addroletoperson.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:ITHS.Webapi.Migrations.init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

@@ -53,7 +53,6 @@ internal class Program
         app = ConfigureAppBuilder(app);
         app.Run();
 
-
         IServiceCollection ConfigureSwagger(IServiceCollection service)
         {
             service.AddEndpointsApiExplorer();
@@ -151,7 +150,6 @@ internal class Program
             return app;
         }
 
-
         static void AddITHSDbContext(WebApplicationBuilder builder)
         {
             var ConnectionString = builder.Configuration.GetConnectionString("ITHSDatabase");
@@ -161,11 +159,8 @@ internal class Program
 
             builder.Services
                     .AddDbContext<ITHSDatabaseContext>(options =>
-                        options.UseSqlServer(ConnectionString, builder =>
-                        {
-                            builder.EnableRetryOnFailure(maxRetryCount: 5);
-                        }),
-                    ServiceLifetime.Scoped
+                        options.UseSqlite("Data Source=SqlLight.db"),
+                        ServiceLifetime.Scoped
                 );
 
         }
